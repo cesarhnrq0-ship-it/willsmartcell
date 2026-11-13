@@ -227,6 +227,40 @@ footer a:hover{color:#fff}
 
 .rev{opacity:0;transform:translateY(26px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
 .rev.in{opacity:1;transform:none}
+
+/* LOJA */
+.shop{background:#fff}
+.shop-bar{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;margin-bottom:22px}
+.chips{display:flex;gap:8px;flex-wrap:wrap}
+.chipb{border:1.5px solid var(--line);background:#fff;padding:9px 15px;border-radius:99px;font:600 13.5px Inter,sans-serif;color:#3a4a66;cursor:pointer;display:flex;align-items:center;gap:6px}
+.chipb .c{font-size:11px;background:var(--bg);border-radius:99px;padding:1px 7px;color:var(--mut)}
+.chipb.on{background:var(--navy);border-color:var(--navy);color:#fff}
+.chipb.on .c{background:rgba(255,255,255,.15);color:#fff}
+.search{position:relative;flex:1;min-width:220px;max-width:320px}
+.search input{width:100%;border:1.5px solid var(--line);border-radius:12px;padding:12px 14px 12px 40px;font:500 14.5px Inter,sans-serif;color:var(--ink);outline:none}
+.search input:focus{border-color:var(--blue)}
+.search svg{position:absolute;left:13px;top:50%;transform:translateY(-50%);width:18px;height:18px;color:var(--mut)}
+.prods{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.pc{border:1px solid var(--line);border-radius:18px;padding:18px;display:flex;flex-direction:column;gap:10px;background:#fff;transition:transform .3s var(--ease),box-shadow .3s,border-color .3s;animation:din .4s var(--ease) both}
+.pc:hover{transform:translateY(-4px);box-shadow:0 20px 40px -26px rgba(7,26,61,.45);border-color:#cddbf5}
+.pc .pi{height:96px;border-radius:14px;display:grid;place-items:center;background:linear-gradient(150deg,#eef3ff,#f7f9ff);color:var(--blue);position:relative}
+.pc .pi svg{width:44px;height:44px}
+.pc.o .pi{background:linear-gradient(150deg,#fff3e8,#fffaf5);color:var(--orange)}
+.pc .off{position:absolute;top:8px;left:8px;background:var(--orange);color:#fff;font-size:11px;font-weight:800;padding:3px 8px;border-radius:8px}
+.pc h4{font-family:Sora;font-size:15px;font-weight:700;color:var(--navy);line-height:1.3}
+.pc small{color:var(--mut);font-size:12.5px;margin-top:-6px}
+.pc .pr{margin-top:auto;display:flex;align-items:baseline;gap:8px}
+.pc .pr b{font-family:Sora;font-size:20px;color:var(--navy)}
+.pc .pr s{color:var(--mut);font-size:13px}
+.pc .pr em{font-style:normal;font-size:13px;font-weight:600;color:var(--mut)}
+.pc a{display:flex;align-items:center;justify-content:center;gap:8px;background:#e9f0ff;color:var(--blue);font-weight:700;font-size:13.5px;padding:10px;border-radius:10px;transition:background .2s,color .2s}
+.pc a:hover{background:var(--blue);color:#fff}
+.pc a svg{width:16px;height:16px}
+.pc.big{grid-column:span 1}
+.empty{grid-column:1/-1;text-align:center;color:var(--mut);padding:40px}
+.more-p{display:flex;justify-content:center;margin-top:26px}
+@media(max-width:1000px){.prods{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:720px){.prods{grid-template-columns:1fr 1fr}.pc{padding:14px}.pc .pi{height:80px}.search{max-width:none}}
 </style>
 </head>
 <body>
@@ -241,7 +275,7 @@ footer a:hover{color:#fff}
     <span class="mark"><svg viewBox="0 0 26 26" fill="none"><rect x="7" y="2.5" width="12" height="21" rx="3" stroke="#fff" stroke-width="2"/><circle cx="17.5" cy="16.5" r="4.6" fill="#ff7a1a" stroke="#0846c4" stroke-width="1.6"/><path d="M17.5 13.6v1.2M17.5 18.2v1.2M14.6 16.5h1.2M19.2 16.5h1.2" stroke="#fff" stroke-width="1.3" stroke-linecap="round"/><circle cx="17.5" cy="16.5" r="1.3" fill="#fff"/></svg></span>
     <span><b>WILL <span>SMART</span> CELL</b><small>Manutenção celular e tablet</small></span>
   </a>
-  <div class="links"><a href="#servicos">Serviços</a><a href="#como">Como funciona</a><a href="#avaliacoes">Avaliações</a><a href="#local">Onde estamos</a></div>
+  <div class="links"><a href="#servicos">Serviços</a><a href="#loja">Loja</a><a href="#como">Como funciona</a><a href="#avaliacoes">Avaliações</a><a href="#local">Onde estamos</a></div>
   <a class="btn btn-o" href="https://wa.me/5511960381591?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20um%20or%C3%A7amento." target="_blank" rel="noopener"><svg><use href="#wa"/></svg>Orçamento</a>
 </div></nav>
 
@@ -250,10 +284,10 @@ footer a:hover{color:#fff}
     <div>
       <span class="eyebrow"><i></i>Assistência técnica no Limão · Zona Norte SP</span>
       <h1>Seu celular de volta, <em>funcionando</em> como novo.</h1>
-      <p class="lead">Conserto de celular, tablet, computador e notebook com peças de qualidade, orçamento honesto e atendimento que já virou referência no bairro.</p>
+      <p class="lead">Conserto de celular, tablet e notebook com peças de qualidade e orçamento honesto. E uma loja completa de celulares e acessórios, tudo no mesmo lugar.</p>
       <div class="ctas">
         <a class="btn btn-o" href="https://wa.me/5511960381591?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20um%20or%C3%A7amento." target="_blank" rel="noopener"><svg><use href="#wa"/></svg>Pedir orçamento no WhatsApp</a>
-        <a class="btn btn-g" href="#servicos">Ver serviços e preços</a>
+        <a class="btn btn-g" href="#loja">Ver a loja</a>
       </div>
       <div class="proof">
         <div class="g"><div class="n">5,0</div><div><div class="st">★★★★★</div><small>183 avaliações no Google</small></div></div>
@@ -317,6 +351,24 @@ footer a:hover{color:#fff}
       <div class="svc"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3v12M7 10l5 5 5-5M4 21h16"/></svg></div><h3>Instalação de programas</h3><p>Instalação e configuração dos programas que você precisa.</p><div class="foot"><div class="price"><small>valor</small><b>R$ 50</b></div><a class="go" href="https://wa.me/5511960381591?text=Ol%C3%A1!%20Quero%20instalar%20programas." target="_blank" rel="noopener">Orçar →</a></div></div>
     </div>
     <p class="note">Valores de referência. O orçamento final é confirmado depois da avaliação do aparelho.</p>
+  </div>
+</section>
+
+
+<section id="loja" class="shop">
+  <div class="wrap">
+    <div class="head rev">
+      <span class="eyebrow"><i></i>Loja</span>
+      <h2>Celulares e acessórios</h2>
+      <p>Aparelhos novos, fones, caixas de som, carregadores e muito mais. Escolha e peça direto pelo WhatsApp.</p>
+    </div>
+    <div class="shop-bar">
+      <div class="chips" id="chips"></div>
+      <label class="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input id="q" type="search" placeholder="Buscar produto…" autocomplete="off"></label>
+    </div>
+    <div class="prods" id="prods"></div>
+    <div class="more-p"><button class="btn btn-g" id="moreBtn" type="button">Ver mais produtos</button></div>
+    <p class="note">Preços do catálogo da loja no WhatsApp. Confirme disponibilidade e valor na hora do pedido.</p>
   </div>
 </section>
 
@@ -431,6 +483,38 @@ footer a:hover{color:#fff}
 <a class="fab" href="https://wa.me/5511960381591?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20um%20or%C3%A7amento." target="_blank" rel="noopener" aria-label="WhatsApp"><svg><use href="#wa"/></svg></a>
 
 <script>
+
+const P=[["cel", "POCO X8 Pro 12/512GB", "", 2895.0, null], ["cel", "Redmi Note 15", "", 1615.0, null], ["cel", "Realme C71 NFC", "", 1599.0, null], ["cel", "Realme 100i 128GB NFC", "Tela de 6,8 polegadas", 1450.0, null], ["cel", "Samsung Galaxy A17", "", 1400.0, null], ["cel", "Redmi 15C", "128GB ou 256GB", 1350.0, null], ["cel", "Xiaomi Poco C85", "", 1350.0, null], ["cel", "Realme Note 70", "Tela de 6,74 polegadas", 1250.0, null], ["som", "Caixa de Som Portátil", "Resistente à água", 249.99, null], ["som", "Caixa de Som Portátil", "À prova d'água", 69.9, null], ["som", "Caixa de Som Portátil RGB", "", 54.9, null], ["som", "Mini Caixas de Som para Notebook", "", 49.9, null], ["som", "Caixa de Som Multimídia USB", "Compatível com notebook e PC", 39.9, null], ["som", "Caixa de Som Mini Speaker", "", 32.5, null], ["fone", "Fone Sem Fio Kaidi", "", 99.99, null], ["fone", "Fone de Ouvido Sem Fio", "", 109.99, null], ["fone", "Fone Sem Fio Hmaston RS", "", 109.99, null], ["fone", "Fone Sem Fio 101 Pro Hmaston", "", 99.99, null], ["fone", "Fone de Ouvido Sem Fio", "Estéreo", 89.99, null], ["fone", "Fone de Ouvido Sem Fio JBL", "", 75.0, null], ["fone", "Fone de Ouvido Sem Fio", "Fofo infantil", 69.99, null], ["fone", "Fone de Ouvido Sem Fio", "Fofo e feminino", 69.99, null], ["fone", "Fone Sem Fio Redmi", "", 50.0, null], ["fone", "Fone Sem Fio Hmaston", "", 45.0, null], ["fone", "Fone Tipo C", "", 20.0, null], ["fone", "Fone P2", "", 20.0, null], ["fone", "Fone iOS", "", null, null], ["car", "Fonte Ultra Rápida 35W", "", 49.99, null], ["car", "Carregador Completo Tipo C", "", 49.9, null], ["car", "Carregador Veicular com Bluetooth", "", 45.0, null], ["car", "Fonte Tipo C 30W", "", 39.99, null], ["car", "Carregador Completo Hmaston", "", 39.99, null], ["car", "Fonte Tipo C Peining", "", 34.99, null], ["car", "Fonte 2 Portas USB e USB-C", "", 29.99, null], ["car", "Fonte Turbo Kaidi", "", 29.99, null], ["car", "Carregador USB para Moto", "", 29.99, null], ["car", "Fonte USB 4.1A", "", 24.9, null], ["car", "Carregador Veicular", "", 25.0, null], ["car", "Carregador Completo Tipo C", "Modelo simples", 25.0, null], ["cabo", "Cabo Tipo C + Tipo C Kaidi", "1 metro", 44.99, null], ["cabo", "Cabo de Dados 4x1", "", 43.0, null], ["cabo", "Cabo Tipo C + Tipo C", "Cabo de dados", 40.0, null], ["cabo", "Cabo HDMI 3m", "", 39.99, null], ["cabo", "Adaptador OTG 3 em 1", "", 39.9, null], ["cabo", "Cabo de Dados Rápido", "", 35.0, null], ["cabo", "Cabo de Dados Tipo C x iOS", "", 30.0, null], ["cabo", "Cabo de Dados 66W Tipo C", "", 29.99, null], ["cabo", "Cabo Tipo C + Tipo C", "", 29.9, null], ["cabo", "Cabo de Dados Kaidi C", "", 25.0, null], ["cabo", "Cabo CFTV CAT6 2m", "", 20.0, null], ["cabo", "Cabo de Conversão HD", "", 20.0, null], ["cabo", "Adaptador Captura de Vídeo", "", 20.0, null], ["pb", "Power Bank 10000mAh Magnético", "", 190.0, null], ["pb", "Power Bank 5000mAh Magnético", "", 120.0, null], ["pb", "Power Bank 5000mAh Kaidi", "Magnético", 120.0, null], ["pb", "Power Bank 10000mAh", "", 99.99, null], ["pb", "Power Bank Magnético", "", 80.0, 120.0], ["pb", "Power Bank 5000mAh", "", 79.9, null], ["sup", "Suporte Veicular Magnético", "", 44.99, null], ["sup", "Suporte Veicular para Celular", "", 42.9, null], ["sup", "Suporte Universal para Moto", "", 39.99, null], ["sup", "Suporte para Moto", "Tipo capacete", 39.9, null], ["sup", "Tripé Multifuncional", "", 39.99, null], ["sup", "Suporte Magnético Veicular", "", 37.9, null], ["sup", "Suporte Magnético para Carro", "Painel do carro", 35.0, null], ["sup", "Suporte Universal para Carro", "Atração magnética", 34.99, null], ["sup", "Suporte Veicular", "Base de copo", 34.9, null], ["sup", "Suporte Universal para Celular", "Moto ou bicicleta", 33.0, null], ["sup", "Suporte Tripé para Celular", "Ajuste de ângulo 360°", 32.0, null], ["sup", "Suporte para Celular Impermeável", "Moto ou bicicleta", 29.9, null], ["sup", "Suporte Magnético para Carro", "", 25.99, null], ["sup", "Suporte Veicular Magnético", "Rotação 360°", 25.0, null], ["sup", "Suporte Veicular Universal", "", 25.0, null], ["sup", "Suporte Universal de Mesa", "", 25.0, null], ["sup", "Suporte Universal para Celular", "", 25.0, null], ["sup", "Tripé Flexível", "", 19.9, null], ["mic", "Microfone Sem Fio P4-A", "Para iOS", 110.0, null], ["mic", "Microfone Sem Fio MK-11", "Para Tipo C", 89.9, null], ["mic", "Microfone Sem Fio MK-10", "Para Tipo C", 39.9, null], ["mic", "Microfone Lapela", "Com fio de 1,5m", 25.9, null], ["out", "Cartão Micro SD Evo Plus 32GB", "", 70.0, null], ["out", "Pendrive USB 3.0 32GB", "", 59.9, null], ["out", "Localizador ITAG", "", 49.99, null], ["out", "Localizador DWQ01", "", 49.99, null], ["out", "Cartão Micro SD 16GB", "HM-M16", 45.0, null], ["out", "Mini Teclado Sem Fio", "", 39.99, null], ["out", "Teclado Essencial Slim", "Conexão USB", 39.99, null], ["out", "Pendrive USB 3.0 8GB", "", 39.9, null], ["out", "Antena Digital HDTV", "", 29.99, null], ["out", "Pendrive USB 3.0 4GB", "", 29.9, null]];
+const CATS=[["all","Todos"],["cel","Celulares"],["som","Caixas de som"],["fone","Fones"],["car","Carregadores"],["cabo","Cabos e adaptadores"],["pb","Power bank"],["sup","Suportes e tripés"],["mic","Microfones"],["out","Outros"]];
+const IC={
+cel:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="6.5" y="2" width="11" height="20" rx="2.5"/><path d="M11 18.5h2"/></svg>',
+som:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="6" y="2.5" width="12" height="19" rx="3"/><circle cx="12" cy="14" r="3.2"/><circle cx="12" cy="6.5" r="1.2"/></svg>',
+fone:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 15v-3a8 8 0 0 1 16 0v3"/><rect x="3" y="14" width="4" height="7" rx="1.5"/><rect x="17" y="14" width="4" height="7" rx="1.5"/></svg>',
+car:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="6" y="7" width="12" height="11" rx="2.5"/><path d="M9.5 7V3M14.5 7V3M12 18v3M12.8 10l-2 3h2.6l-2 3"/></svg>',
+cabo:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M7 3v4M10 3v4M5.5 7h6v4a3 3 0 0 1-6 0V7ZM8.5 14v2a5 5 0 0 0 10 0V8"/><rect x="16" y="3" width="5" height="5" rx="1"/></svg>',
+pb:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="5" y="3" width="14" height="18" rx="3"/><path d="M12.8 8l-2.5 4h3.4l-2.5 4"/></svg>',
+sup:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="8" y="2" width="8" height="12" rx="1.5"/><path d="M12 14v4M8 21l4-3 4 3"/></svg>',
+mic:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="9" y="2.5" width="6" height="11" rx="3"/><path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5V21M8.5 21h7"/></svg>',
+out:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8l9-5 9 5-9 5-9-5Z"/><path d="M3 8v8l9 5 9-5V8M12 13v8"/></svg>'};
+const fmt=v=>v.toLocaleString('pt-BR',{minimumFractionDigits:2,maximumFractionDigits:2});
+let cat="all",lim=12;const q=document.getElementById('q');
+const chips=document.getElementById('chips');
+chips.innerHTML=CATS.map(([k,n])=>`<button class="chipb${k==="all"?" on":""}" data-k="${k}">${n}<span class="c">${k==="all"?P.length:P.filter(p=>p[0]===k).length}</span></button>`).join('');
+chips.onclick=e=>{const b=e.target.closest('.chipb');if(!b)return;cat=b.dataset.k;lim=12;chips.querySelectorAll('.chipb').forEach(x=>x.classList.toggle('on',x===b));drawP()};
+q.oninput=()=>{lim=12;drawP()};
+document.getElementById('moreBtn').onclick=()=>{lim+=12;drawP()};
+function drawP(){
+  const t=q.value.trim().toLowerCase();
+  const L=P.filter(p=>(cat==="all"||p[0]===cat)&&(!t||(p[1]+" "+p[2]).toLowerCase().includes(t)));
+  const show=L.slice(0,lim);
+  document.getElementById('prods').innerHTML=show.length?show.map((p,i)=>{
+    const msg=encodeURIComponent(`Olá! Vi no site e tenho interesse em: ${p[1]}${p[2]?" ("+p[2]+")":""}${p[3]?" - R$ "+fmt(p[3]):""}. Tem disponível?`);
+    const price=p[3]?`<b>R$ ${fmt(p[3])}</b>${p[4]?`<s>R$ ${fmt(p[4])}</s>`:""}`:`<em>Consulte o valor</em>`;
+    return `<div class="pc${["som","pb","mic"].includes(p[0])?" o":""}" style="animation-delay:${(i%12)*30}ms"><div class="pi">${p[4]?'<span class="off">Oferta</span>':""}${IC[p[0]]}</div><h4>${p[1]}</h4>${p[2]?`<small>${p[2]}</small>`:""}<div class="pr">${price}</div><a href="https://wa.me/5511960381591?text=${msg}" target="_blank" rel="noopener"><svg><use href="#wa"/></svg>Pedir no WhatsApp</a></div>`}).join(""):'<div class="empty">Nenhum produto encontrado. Chama no WhatsApp que a gente verifica.</div>';
+  document.getElementById('moreBtn').parentElement.style.display=L.length>lim?"flex":"none";
+}
+drawP();
+
 const nav=document.getElementById('nav');addEventListener('scroll',()=>nav.classList.toggle('s',scrollY>30),{passive:true});
 document.querySelectorAll('.tab').forEach(t=>t.onclick=()=>{
   document.querySelectorAll('.tab').forEach(x=>x.classList.toggle('on',x===t));
